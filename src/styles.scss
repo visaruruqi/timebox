@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+}
+
+.App {
+  margin-top: 40px;
+  font-family: sans-serif;
+  text-align: center;
+  
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+
+  .brand {
+    display: flex;
+
+    .logo {
+      img {
+      border-radius:5px;
+      }
+    }
+
+    .brand-title {
+      word-wrap: break-word;
+      width: 50px;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 10px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+  }
+
+  .top-priorities-wrapper {
+    margin-top: 30px;
+    text-align: left;
+    label {
+      font-weight: bold;
+    }
+
+    .top-priorities {
+      margin-top: 10px;
+      grid-template-columns: 1fr;
+      grid-row: auto;
+
+      input {
+        border:none;
+        outline: none;
+        width: 97%;
+        height: 94%;
+      }
+      
+
+      > div {
+        border:1px solid #000;
+        height: 30px;
+      }
+
+      > div:nth-child(n+1) {
+        border-bottom: none;
+      }
+      > div:last-child {
+        border-bottom:1px solid #000;
+      }
+    }
+
+
+  }
+
+  .brain-dump-wrapper {
+    margin-top: 30px;
+    text-align: left;
+
+    label {
+      font-weight: bold;
+    }
+    .brain-dump {
+      margin-top: 10px;
+      height: 50%;
+      width: 100%;
+      border:1px solid #000;
+
+      textarea {
+        border:none;
+        outline: none;
+        width: 97%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+     
+      .dot {
+        height: 1px;
+        width: 1px;
+        background-color: #666;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 2px;
+      }
+    }
+  }
+
+  .date-input {
+    text-align: left;
+    span {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+    input {
+      border:none;
+      outline: none;
+      width: 80%;
+      height: 100%;
+      border-bottom: 1px solid #D9D9D9;
+    }
+  }
+
+  .time-table-wrapper {
+    margin-top: 30px;
+    .start-end {
+      display:grid;
+      grid-template-columns: 1fr 3fr 3fr;
+      
+    }
+
+    .time-table {
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-row: auto;
+
+      .row {
+        display:grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        border:1px solid #000;
+
+        .hour {
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          padding: 4px;
+          border-right: 1px solid #000;
+        }
+
+        .start {
+          border-right: 1px solid #000;
+        }
+
+        input {
+          border:none;
+          outline: none;
+          height: 100%;
+        }
+        
+      }
+
+      .row:nth-child(n+1) {
+        border-bottom: none;
+      }
+      .row:last-child {
+        border-bottom:1px solid #000;
+      }
+    }
+  }
+}
